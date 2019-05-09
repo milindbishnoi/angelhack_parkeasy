@@ -1,14 +1,16 @@
-package com.example.angelhack;
+package com.example.angelhack.UI;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class profile_activity extends AppCompatActivity {
+import com.example.angelhack.R;
+
+public class ProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_activity);
+        setContentView(R.layout.activity_profile);
 
     }
 }

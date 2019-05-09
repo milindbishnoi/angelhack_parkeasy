@@ -2,36 +2,32 @@ package com.example.angelhack;
 
 import android.content.Intent;
 import android.os.Build;
-import android.speech.RecognitionListener;
-import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.speech.tts.TextToSpeech;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.List;
+import com.example.angelhack.UI.MainPageActivity;
+
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class SplashScreen extends AppCompatActivity {
     TextView tvEnter;
     private TextToSpeech myTTs;
     private SpeechRecognizer myspeech;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.splash_screen);
         tvEnter = findViewById(R.id.tvEnter);
         tvEnter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,com.example.angelhack.Page1.class);
+                Intent intent = new Intent(SplashScreen.this, MainPageActivity.class);
                 startActivity(intent);
             }
         });
@@ -44,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onInit(int i) {
             if (myTTs.getEngines().size() == 0) {
-                Toast.makeText(MainActivity.this, "There is no TTS engine on your device", Toast.LENGTH_LONG).show();
+                Toast.makeText(SplashScreen.this, "There is no TTS engine on your device", Toast.LENGTH_LONG).show();
                 finish();
             } else {
                 myTTs.setLanguage(Locale.ENGLISH);

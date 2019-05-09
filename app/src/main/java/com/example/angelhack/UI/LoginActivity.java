@@ -1,4 +1,4 @@
-package com.example.angelhack;
+package com.example.angelhack.UI;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -12,13 +12,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.angelhack.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.SignInMethodQueryResult;
 
-public class loginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     EditText etUser, etPass;
     Button btnSignin;
     TextView tvPrompt;
@@ -48,7 +49,7 @@ public class loginActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<SignInMethodQueryResult> task) {
                     check1 = task.getResult().getSignInMethods().isEmpty();
                     if (check1) {
-                        Toast.makeText(loginActivity.this, "E-Mail address not found in our records", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "E-Mail address not found in our records", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -60,18 +61,18 @@ public class loginActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     progressDialog1.dismiss();
                     if(task.isSuccessful()){
-                        Toast.makeText(loginActivity.this,"Login successful",Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(loginActivity.this,com.example.angelhack.profile_activity.class);
+                        Toast.makeText(LoginActivity.this,"Login successful",Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
                         startActivity(intent);
                     }
                     else
-                        Toast.makeText(loginActivity.this,"An error occurred. Please try again later.",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this,"An error occurred. Please try again later.",Toast.LENGTH_SHORT).show();
                 }
             });
         }
     }
     public void prompt(View view){
-        Intent intent = new Intent(loginActivity.this,com.example.angelhack.registerActivity.class);
+        Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
         startActivity(intent);
     }
 }

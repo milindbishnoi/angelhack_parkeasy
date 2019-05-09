@@ -1,4 +1,4 @@
-package com.example.angelhack;
+package com.example.angelhack.DataModels;
 
 public class User {
     String name;

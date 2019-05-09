@@ -1,4 +1,4 @@
-package com.example.angelhack;
+package com.example.angelhack.DataModels;
 
 import java.util.List;
 
@@ -7,6 +7,13 @@ public class Building {
     int[] floor2;
     int[] floor3;
     int[] floor4;
+
+    public Building(int[] floor1, int[] floor2, int[] floor3, int[] floor4) {
+        this.floor1 = floor1;
+        this.floor2 = floor2;
+        this.floor3 = floor3;
+        this.floor4 = floor4;
+    }
 
     public int[] getFloor1() {
         return floor1;
@@ -40,10 +47,5 @@ public class Building {
         this.floor4 = floor4;
     }
 
-    public Building(int[] floor1, int[] floor2, int[] floor3, int[] floor4) {
-        this.floor1 = floor1;
-        this.floor2 = floor2;
-        this.floor3 = floor3;
-        this.floor4 = floor4;
-    }
+
 }
