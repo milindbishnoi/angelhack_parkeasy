@@ -42,7 +42,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="15dp"
         android:ems="10"
-        android:hint="enter email "
+        android:hint="enter vehicle number "
         android:inputType="textPersonName" />
 
     <EditText
