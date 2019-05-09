@@ -30,7 +30,7 @@ public class registerActivity extends AppCompatActivity {
     Button btnSignup, btnSubmit;
     FirebaseAuth firebaseAuth;
     ProgressDialog progressDialog;
-    String otp;
+    String otp, id;
     Random random;
     static boolean check;
     public String username, email, password, confirm, contact;
@@ -76,7 +76,9 @@ public class registerActivity extends AppCompatActivity {
             });
             if (check) {
                 SmsManager manager = SmsManager.getDefault();
-                manager.sendTextMessage(contact, null, "8888", null, null);
+                int random = new Random().nextInt(9000) + 1000;
+                id = Integer.toString(random);
+                manager.sendTextMessage(contact, null, id, null, null);
                 Toast.makeText(registerActivity.this, "OTP sent", Toast.LENGTH_SHORT).show();
                 etOtp.setVisibility(View.VISIBLE);
                 btnSubmit.setVisibility(View.VISIBLE);
@@ -86,9 +88,9 @@ public class registerActivity extends AppCompatActivity {
     }
     public void submit(View view){
         String enteredOTP = etOtp.getText().toString().trim();
-        if(enteredOTP.equals("8888")){
+        if(enteredOTP.equals(id)){
             progressDialog.setTitle("Registering..");
-            progressDialog.setMessage("Please wait while we are set things up :)");
+            progressDialog.setMessage("Please wait while we are setting things up :)");
             progressDialog.show();
             firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override

@@ -23,4 +23,5 @@
         android:text="Click here to enter "
         android:textSize="18sp"
         android:textStyle="bold|italic" />
+
 </LinearLayout>
