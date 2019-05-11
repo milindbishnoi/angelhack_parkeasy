@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "808354248275",
+    "firebase_url": "https://parking-a4cbe.firebaseio.com",
+    "project_id": "parking-a4cbe",
+    "storage_bucket": "parking-a4cbe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808354248275:android:2376188fc483d0e4",
+        "android_client_info": {
+          "package_name": "com.example.angelhack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "808354248275-eoknne62jhhmuo49a63sp21m69g4thd7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.angelhack",
+            "certificate_hash": "fc8fbc7c887b14ff3581ceeaf7aebc634f55450b"
+          }
+        },
+        {
+          "client_id": "808354248275-4lal6jhks6tq66s5116vd2f2jv3t4son.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgH2Bo4V1az7i5YVWQOSHwoXtV9POZDos"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "808354248275-4lal6jhks6tq66s5116vd2f2jv3t4son.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
