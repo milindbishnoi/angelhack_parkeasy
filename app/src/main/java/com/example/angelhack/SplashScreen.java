@@ -1,5 +1,6 @@
 package com.example.angelhack;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.speech.SpeechRecognizer;
@@ -12,6 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.angelhack.UI.MainPageActivity;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Locale;
 
@@ -22,6 +25,7 @@ public class SplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FirebaseApp.initializeApp(this);
         setContentView(R.layout.splash_screen);
         tvEnter = findViewById(R.id.tvEnter);
         tvEnter.setOnClickListener(new View.OnClickListener() {

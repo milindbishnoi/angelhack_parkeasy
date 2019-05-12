@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText etUser, etPass;
     Button btnSignin;
     TextView tvPrompt;
-    FirebaseAuth firebaseAuth1;
+    private FirebaseAuth firebaseAuth1;
     ProgressDialog progressDialog1;
     static boolean check1;
     @Override
@@ -34,8 +34,8 @@ public class LoginActivity extends AppCompatActivity {
         etPass = findViewById(R.id.etPass);
         tvPrompt = findViewById(R.id.tvPrompt);
         btnSignin = findViewById(R.id.btnSignin);
-        progressDialog1 = new ProgressDialog(this);
         firebaseAuth1 = FirebaseAuth.getInstance();
+        progressDialog1 = new ProgressDialog(this);
     }
     public void loginUser(View view) {
         String user, pass;
