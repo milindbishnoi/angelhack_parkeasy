@@ -1,6 +1,6 @@
 # angelhack_parkeasy
 
-This is a parking assistance app that lets the user to find the nearest parking space on the basis of his/her current location. It also generates parking fee accordingly. 
+This is a parking Assistance App that lets the user to find the nearest parking space on the basis of his/her current location. It also generates parking fee accordingly. 
 
 Functions included - Authentication using Firebase
                      Database using Firebase
