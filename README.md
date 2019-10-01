@@ -1,4 +1,4 @@
-# angelhack_parkeasy
+# Angelhack_Parkeasy
 
 This is a parking Assistance App that lets the user to find the nearest parking space on the basis of his/her current location. It also generates parking fee accordingly. 
 
